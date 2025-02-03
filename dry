@@ -1,0 +1,5 @@
+Don’t Repeat Yourself
+
+Reuse code wherever possible instead of duplicating it.
+Helps prevent redundancy, reduces errors, and makes maintenance easier.
+Promotes modularization and abstraction.
