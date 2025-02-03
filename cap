@@ -1,0 +1,13 @@
+Consistency: All data across all nodes in a distributed system is the same.
+
+Availability: Every request made to the database receives a response, even if some nodes are unreachable.
+
+Partition tolerance: The system continues to operate even if network partitions occur, adversely affecting nodes and creating isolations.
+
+
+According to the theorem,
+  a distributed system must choose between consistency and availability depending on the presence of network partitions.
+  This means that under network partitions, the system can either sacrifice consistency to maintain availability or sacrifice availability to maintain consistency.
+
+
+Some Database Sysem can offer consistency with the performance cose long with Availability
