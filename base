@@ -1,0 +1,5 @@
+BASE:
+
+Basically Available: Always available to respond with data
+S - Soft State: Data may change over time without user intervation as it is not consistent
+E - Eventual consistent: Transactions/Data gets replicated over the period of time to all the replicas
