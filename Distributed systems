@@ -1,0 +1,28 @@
+Fault Tolerance
+
+efers to the ability of a system to continue operating even if one or more of its components fail, typically achieved by using redundancy across multiple servers, allowing applications to remain accessible even if a single server goes down; this is often implemented through features like horizontal scaling and containerization, which isolate failures within individual containers, preventing cascading effects across the system
+
+Circuit Breakers
+
+Stop communication with the service which is not stable.
+Try few requests to check the stability
+
+Rate limiting:
+
+Token based system, consume token on request and fill tokens periodiacally. E.g fill 60 tokens each minutes to limit the 60 requests per minute.
+
+Leaky Bucket, if request queue capacity if full, drop the requests. Allows maximum request servig rate, as per servers capacity..
+
+Fixed Window Counter:
+If the limit is 100 requests per hour, and a user makes 100 requests in the first half-hour, they will be blocked for the remaining half-hour, even if the server is underutilized during that time.
+
+Sliding Log:
+Suppose you still have a limit of 100 requests per minute.
+
+Every request within that time window is logged with its timestamp.
+As each new request arrives, the system checks the log and counts how many requests have occurred in the past 60 seconds (or whatever the time window is).
+If there are more than 100 requests in that 60-second window, the request is rejected.
+
+
+
+
