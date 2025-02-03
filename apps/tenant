@@ -1,0 +1,10 @@
+Database:
+
+Shared Database Model: All tenants use the same database schema but with tenant IDs to differentiate data.
+Database-per-Tenant Model: Each tenant has its own separate database, offering higher isolation but at the cost of more complex management.
+
+Access Control:
+Role based
+Attribute based
+Context based
+User based
