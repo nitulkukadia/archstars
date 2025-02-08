@@ -1,0 +1,17 @@
+# Don’t do this
+POST: /books/createNewBook/
+GET /book
+# Do this
+POST: /books/
+GET /books/id
+
+Codes:
+
+GET: 200 OK
+PUT: 200 OK
+POST: 201 Created
+PATCH: 200 OK
+DELETE: 204 No Content
+
+Has the consumer not provided authentication credentials? Was their SSO Token invalid/timed out? 👉 401 Unauthorized.
+Was the consumer correctly authenticated, but they don’t have the required permissions/proper clearance to access the resource? 👉 403 Forbidden.
